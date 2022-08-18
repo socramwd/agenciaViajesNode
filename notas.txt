@@ -1,0 +1,43 @@
+NodeJS
+    Un entorno de código abierto, multiplataforma que permite crear aplicaciones del lado del servidor en JavaScript.
+    Permite crear API's, aplicaciones web e incluso acceder a archivos y leer sus contenidos.
+
+    Ventajas
+        Velocidad y rendimiento. Excelente para aplicaciones en tiempo real.
+        Crear aplicaciones fullstack con node sin necesidad de compiladores ni lenguajes extras.
+        NPM(Node Package Manager) paquetes y librerias de codigo abierto listos
+            Instalar -> npm i
+
+Express
+    Framework web más popular de Node
+    Soporta verbos de HTTP
+    Soporta vistas
+    Permite aplicaciones MVC
+
+Pasos:
+    1.- Crear package.json en raiz -> npm init
+    2.- Instalar Express(en producción) -> npm i express
+    3.- Instalar nodemon(en desarrollo) -> npm i --save-dev nodemon (Se evita tener que detener el servidor para los cambios)
+    4.- Crear index.js (archivo para configurar express -> servidor donde va a correr la app, similar a Apache)
+    5.- Arrancar el proyecto:
+        - Archivo package.json:
+            "scripts": {
+                "dev": "nodemon index.js"
+            },
+        - Desde terminal en carpeta raiz -> npm run dev
+        - localhost:4000
+    6.- Las rutas las creamos en router/index.js y las importamos en index.js
+    7.- Instalamos un Template Engine(en este caso PUB) -> npm i pug y lo habilitamos en index.js
+    8.- Creamos carpeta views y creamos las vistas *****.pug por ejemplo
+    
+Herramienta html to pug -> https://html-to-pug.com/
+Dependencias para bases de datos
+    npm install mysql2 sequelize
+
+DEPLOYMENT
+    Variable de entorno es diferente a la variable de produccion. Para la seguridad
+    Instalamos npm i dotenv (dependencia en produccion)
+    Creamos en la carpeta raiz un archivo -> .env
+
+    En github, creamos un nuevo repositorio
+    Seguir los pasos
